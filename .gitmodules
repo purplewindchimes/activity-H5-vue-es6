@@ -1,0 +1,3 @@
+[submodule "projects/demo"]
+	path = projects/demo
+	url = ssh://git@gitlab.qiyi.domain:10022/guochen/demo.git

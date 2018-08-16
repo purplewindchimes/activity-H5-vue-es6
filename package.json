@@ -1,0 +1,42 @@
+{
+  "name": "activity-scaffolding",
+  "version": "1.0.0",
+  "description": "Collection of activity project scaffolding",
+  "main": "index.js",
+  "scripts": {
+    "start": "./scripts/start-default.sh",
+    "build": "./scripts/build-default.sh",
+    "build:analyzer": "./scripts/build-analyzer.sh",
+    "start:vue": "./scripts/start-vue.sh",
+    "build:vue": "./scripts/build-vue.sh",
+    "build:vue:analyzer": "./scripts/build-vue-analyzer.sh"
+  },
+  "keywords": [
+    "scaffolding",
+    "activities"
+  ],
+  "author": "Guo Chen",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.5",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-preset-env": "^1.7.0",
+    "glob": "^7.1.2",
+    "html-webpack-plugin": "^3.2.0",
+    "vue-loader": "^15.2.4",
+    "vue-template-compiler": "^2.5.16",
+    "webpack": "^4.16.0",
+    "webpack-bundle-analyzer": "^2.13.1",
+    "webpack-cli": "^3.0.8",
+    "webpack-dev-server": "^3.1.4",
+    "webpack-parallel-uglify-plugin": "^1.1.0"
+  },
+  "dependencies": {
+    "babel-runtime": "^6.26.0",
+    "vue": "^2.5.16",
+    "vue-router": "^3.0.1",
+    "vuex": "^3.0.1",
+    "webpack-merge": "^4.1.3"
+  }
+}

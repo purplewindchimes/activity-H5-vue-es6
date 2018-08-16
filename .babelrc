@@ -1,0 +1,16 @@
+{
+	"presets":[
+		["env",{
+			"targets":{
+				"modules":"commonjs"
+			}
+		}]
+	],
+	"plugins":[
+		["transform-runtime",{
+			"helpers":false,
+			"polyfill":false,
+			"regenerator":true
+		}]
+	]
+}
