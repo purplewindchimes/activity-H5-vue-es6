@@ -167,3 +167,13 @@ git submodule update <localpath>
 3. 开发后，先commit本地代码，如没有基础库文件改动，可直接提交到gitlab；如有基础库改动，在base分支上新开hotfix分支，修改并确认无bug时merge到base分支（注意：base分支只有基础库代码，不含任何业务代码；base分支建议使用git pull --rebase保持主分支的清洁）
 4. 代码通过测试后，需要将本地分支的代码merge到master分支，进行代码review后方可上线
 5. 代码提交过程中，建议多提交，少推送，保持主base分支的整洁，少用或者禁用fast-forward模式，合并的时候使用--no-ff参数，尽量避免交叉合并的情况出现
+
+git 分支示意图：
+
+```
+                /---  master分支，存储所有的活动业务代码 
+  ———base分支——|
+                \---  业务代码分支  
+                \--- hotfix分支，主要用来修改公共的库文件代码，修改并确认无bug后merge到base分支       
+   
+```
