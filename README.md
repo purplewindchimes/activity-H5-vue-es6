@@ -162,8 +162,8 @@ git submodule update <localpath>
 
 ## 代码的git提交
 
-> 此项目主要分为两个分支，base分支和master分支，其中master分支主要存储各个活动项目代码，base分支存储底层框架基础代码，clone下的代码是base分支代码，可直接开始项目开发
-> 开发前，如有必要可在本地checkout新分支
-> 开发后，先commit本地代码，在checkout到base分支，这里要注意先进行主分支更新（建议使用git pull --rebase保持主分支的清洁），然后再进行分支的合并 推送
-> 代码通过测试后，需要将base分支的代码merge到master分支，进行代码review后方可上线
-> 代码提交过程中，建议多提交，少推送，保持主分支的整洁，少用或者禁用fast-forward模式，合并的时候使用--no-ff参数，尽量避免交叉合并的情况出现
+1. 此项目主要分为两个分支，base基础库分支和master分支，其中master分支主要存储各个活动项目代码，base分支存储底层框架基础代码，clone下的代码是base分支代码
+2. 开发前，在本地checkout新分支
+3. 开发后，先commit本地代码，如没有基础库文件改动，可直接提交到gitlab；如有基础库改动，在base分支上新开hotfix分支，修改并确认无bug时merge到base分支（注意：base分支只有基础库代码，不含任何业务代码；base分支建议使用git pull --rebase保持主分支的清洁）
+4. 代码通过测试后，需要将本地分支的代码merge到master分支，进行代码review后方可上线
+5. 代码提交过程中，建议多提交，少推送，保持主base分支的整洁，少用或者禁用fast-forward模式，合并的时候使用--no-ff参数，尽量避免交叉合并的情况出现
