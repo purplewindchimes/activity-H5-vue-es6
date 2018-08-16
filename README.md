@@ -170,10 +170,9 @@ git submodule update <localpath>
 
 git 分支示意图：
 
-```
-                /---  master分支，存储所有的活动业务代码 
-  ———base分支——|
-                \---  业务代码分支  
-                \--- hotfix分支，主要用来修改公共的库文件代码，修改并确认无bug后merge到base分支       
-   
+```    
+        |—— master       // 存储所有的活动业务代码 
+    ————|—— base         // base主分支，存储基础库代码
+        |—— develop      // 业务代码分支
+        |—— hotfix       // 当有公共库代码修改时，使用此分支 
 ```
